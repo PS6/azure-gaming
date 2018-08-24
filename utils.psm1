@@ -58,8 +58,8 @@ function Edit-VisualEffectsRegistry {
 function Install-NvidiaDriver ($manual_install) {
     Write-Output "Installing Nvidia Driver"
     $driver_file = "nvidia-driver.exe"
-    $version = "391.03"
-    $url = "http://us.download.nvidia.com/Windows/Quadro_Certified/$version/$version-quadro-grid-desktop-notebook-win10-64bit-international-whql.exe"
+    $version = "391.81"
+    $url = "https://gpudrivers.file.core.windows.net/nvinstance/Windows/391.81_grid_win10_server2016_64bit_international.exe"
 
     Write-Output "Downloading Nvidia M60 driver from URL $url"
     $webClient.DownloadFile($url, "$PSScriptRoot\$driver_file")
@@ -99,7 +99,7 @@ function Install-VirtualAudio {
     $hardward_id = "VBAudioVACWDM"
 
     Write-Output "Downloading Virtual Audio Driver"
-    $webClient.DownloadFile("http://vbaudio.jcedeveloppement.com/Download_CABLE/VBCABLE_Driver_Pack43.zip", "$PSScriptRoot\$compressed_file")
+    $webClient.DownloadFile("https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack43.zip", "$PSScriptRoot\$compressed_file")
     Unblock-File -Path "$PSScriptRoot\$compressed_file"
 
     Write-Output "Extracting Virtual Audio Driver"
@@ -115,7 +115,7 @@ function Install-VirtualAudio {
     Start-Process -FilePath "$PSScriptRoot\$wdk_installer" -ArgumentList "/S" -Wait
 
     $cert = "vb_cert.cer"
-    $url = "https://github.com/ecalder6/azure-gaming/raw/master/$cert"
+    $url = "https://github.com/ps6/azure-gaming/raw/master/$cert"
 
     Write-Output "Downloading vb certificate from $url"
     $webClient.DownloadFile($url, "$PSScriptRoot\$cert")
@@ -142,7 +142,7 @@ function Disable-IPv6To4 {
 
 function Install-VPN {
     $cert = "zerotier_cert.cer"
-    $url = "https://github.com/ecalder6/azure-gaming/raw/master/$cert"
+    $url = "https://github.com/ps6/azure-gaming/raw/master/$cert"
 
     Write-Output "Downloading zero tier certificate from $url"
     $webClient.DownloadFile($url, "$PSScriptRoot\$cert")
@@ -178,7 +178,7 @@ function Install-Steam {
 
 function Set-ScheduleWorkflow ($admin_username, $admin_password, $manual_install) {
     $script_name = "setup2.ps1"
-    $url = "https://raw.githubusercontent.com/ecalder6/azure-gaming/master/$script_name"
+    $url = "https://raw.githubusercontent.com/ps6/azure-gaming/master/$script_name"
 
     Write-Output "Downloading second stage setup script from $url"
     $webClient.DownloadFile($url, "C:\$script_name")
