@@ -58,10 +58,9 @@ function Edit-VisualEffectsRegistry {
 function Install-NvidiaDriver ($manual_install) {
     Write-Output "Installing Nvidia Driver"
     $driver_file = "nvidia-driver.exe"
-    $version = "391.89"
-    $url = "https://gpudrivers.file.core.windows.net/nvinstance/Windows/391.81_grid_win10_server2016_64bit_international.exe"
-    $url= "http://fr.download.nvidia.com/Windows/Quadro_Certified/$version/$version-quadro-grid-desktop-notebook-win10-64bit-international-whql.exe"
-
+    $version = "391.81"
+    $url = $DriverURL
+    
     Write-Output "Downloading Nvidia M60 driver from URL $url"
     $webClient.DownloadFile($url, "$PSScriptRoot\$driver_file")
 
