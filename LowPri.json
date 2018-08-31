@@ -21,6 +21,13 @@
                 "description": "Location of the setup script."
             },
             "defaultValue": "https://raw.githubusercontent.com/ps6/azure-gaming/master"
+                },
+        "DriverURL": {
+            "type": "securestring",
+            "metadata": {
+                "description": "Where is the NVIDIA Driver."
+            },
+            "defaultValue": ""
         },
         "networkID": {
             "type": "securestring",
