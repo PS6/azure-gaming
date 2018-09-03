@@ -58,8 +58,8 @@ function Edit-VisualEffectsRegistry {
 function Install-NvidiaDriver ($manual_install) {
     Write-Output "Installing Nvidia Driver"
     $driver_file = "nvidia-driver.exe"
-    $version = "391.81"
-    $url = $DriverURL
+    $version = "397.44"
+    $url = "http://us.download.nvidia.com/Windows/Quadro_Certified/$version/$version-tesla-desktop-winserver2016-international.exe"
     
     Write-Output "Downloading Nvidia M60 driver from URL $url"
     $webClient.DownloadFile($url, "$PSScriptRoot\$driver_file")
