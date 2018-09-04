@@ -36,6 +36,8 @@ Install-NSSM
 Install-WinSCP
 Run-WinSCP
 
+Install-FireFox
+
 Install-NvidiaDriver $manual_install
 Set-ScheduleWorkflow $admin_username $admin_password $manual_install
 Restart-Computer
