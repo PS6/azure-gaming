@@ -165,6 +165,18 @@ function Install-NSSM {
     choco install nssm --force
 }
 
+function Install-WinSCP {
+    Write-Output "Installing WinSCP"
+    choco install winscp --force
+}
+
+function Run-WinSCP {
+    Write-Output "Installing WinSCP"
+    choco install winscp --force
+}
+
+
+
 function Install-Steam {
     $steam_exe = "steam.exe"
     Write-Output "Downloading steam into path $PSScriptRoot\$steam_exe"
