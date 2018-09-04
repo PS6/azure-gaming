@@ -33,6 +33,8 @@ Add-DisconnectShortcut
 
 Install-Chocolatey
 Install-NSSM
+Install-WinSCP
+Run-WinSCP
 
 Install-NvidiaDriver $manual_install
 Set-ScheduleWorkflow $admin_username $admin_password $manual_install
