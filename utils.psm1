@@ -175,7 +175,6 @@ function Install-FireFox {
     choco install firefox
 }
 
-
 function Run-WinSCP {
     Write-Output "Running WinSCP"
     winscp $sshinfo
