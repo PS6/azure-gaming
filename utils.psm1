@@ -170,12 +170,16 @@ function Install-WinSCP {
     choco install winscp --force
 }
 
-function Run-WinSCP {
-    Write-Output "Installing WinSCP"
-    choco install winscp --force
+function Install-FireFox {
+    Write-Output "Installing FireFox"
+    choco install firefox
 }
 
 
+function Run-WinSCP {
+    Write-Output "Running WinSCP"
+    winscp $sshinfo
+}
 
 function Install-Steam {
     $steam_exe = "steam.exe"
