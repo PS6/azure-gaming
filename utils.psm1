@@ -58,9 +58,9 @@ function Edit-VisualEffectsRegistry {
 function Install-NvidiaDriver ($manual_install) {
     Write-Output "Installing Nvidia Driver"
     $driver_file = "nvidia-driver.exe"
-    $version = "397.44"
-    $url = "http://us.download.nvidia.com/Windows/Quadro_Certified/$version/$version-tesla-desktop-winserver2016-international.exe"
-    
+    $version = "391.81"
+    $url = "https://go.microsoft.com/fwlink/?linkid=836843"
+        
     Write-Output "Downloading Nvidia M60 driver from URL $url"
     $webClient.DownloadFile($url, "$PSScriptRoot\$driver_file")
 
@@ -176,8 +176,7 @@ function Install-FireFox {
 }
 
 function Run-WinSCP {
-    Write-Output "Running WinSCP"
-    winscp $sshinfo
+    Write-Output "Running WinSCP (dummy)"
 }
 
 function Install-Steam {
